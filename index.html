@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Mini Rede Social</title>
+</head>
+<body>
+    <header>
+        <h1>Mini Rede Social</h1>
+    </header>
+    <div class="main">
+        <form id="postForm" class="postagem">
+            <label for="postText"><strong>Digite seu post:</strong></label>
+            <textarea id="TextodoPost" name="textarea" placeholder="O que você está pensando hoje?" required></textarea>
+
+            <label for="postCategoria"><strong>Categoria:</strong></label>
+            <select id="postCategoria" name="category">
+                <option value="Todos">Todos</option>
+                <option value="noticia">Notícias</option>
+                <option value="dica">Dicas</option>
+                <option value="eventos">Eventos</option>
+            </select>
+
+            <label for="postImg1"><strong>Insira uma Imagem URL:</strong></label>
+            <input type="url" id="urlPost1" name="image" placeholder="Insira a URL aqui">
+            <label for="postImg2"><strong>Insira uma Imagem URL:</strong></label>
+            <input type="url" id="urlPost2" name="image" placeholder="Insira a URL aqui">
+            <label for="postImg3"><strong>Insira uma Imagem URL:</strong></label>
+            <input type="url" id="urlPost3" name="image" placeholder="Insira a URL aqui">
+
+            <button type="submit" class="btnSubmit" id="BtnPostar">Postar</button>
+        </form>
+
+        <div id="postsContainer"></div>
+    </div>
+</body>
+</html>
