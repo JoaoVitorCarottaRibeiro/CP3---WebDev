@@ -56,12 +56,12 @@ function editPost(ElementodoPost, TextodoPost, postCategoria, urlPost1, urlPost2
 }
 
 function setupCarousel(carousel) {
-    const imagesContainer = carousel.querySelector('.carousel-images');
-    const images = imagesContainer.querySelectorAll('img');
+    const imagensContainer = carousel.querySelector('.carousel-images');
+    const imagens = imagensContainer.querySelectorAll('img');
     let currentIndex = 0;
 
     carousel.querySelector('.next').addEventListener('click', function() {
-        if (currentIndex < images.length - 1) {
+        if (currentIndex < imagens.length - 1) {
             currentIndex++;
         } else {
             currentIndex = 0;
@@ -73,13 +73,13 @@ function setupCarousel(carousel) {
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = images.length - 1;
+            currentIndex = imagens.length - 1;
         }
         updateCarousel();
     });
 
     function updateCarousel() {
-        const offset = -currentIndex * 100;
-        imagesContainer.style.transform = `translateX(${offset}%)`;
+        const offset = -currentIndex * 50;
+        imagensContainer.style.transform = `translateX(${offset}%)`;
     }
 }
